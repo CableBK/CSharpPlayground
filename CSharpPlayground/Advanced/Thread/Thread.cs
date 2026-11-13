@@ -1,14 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Text;
+using System.Threading.Tasks; // Fix: Add missing using for Parallel
 
 namespace CSharpPlayground.Advanced.Thread
 {
     internal class Thread
     {
-        int counter = 0;
-
-
+        public void RunParallelCounter()
+        {
+            int counter = 0;
+            Parallel.For(0, 1_000_000, _ => counter++);
+            Console.WriteLine(counter);
+        }
     }
 }
 
