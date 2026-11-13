@@ -1,21 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Metrics;
-using System.Text;
-using System.Threading.Tasks; // Fix: Add missing using for Parallel
+﻿
+int counter = 0;
+Parallel.For(0, 1_000_000, _ => counter++);
+Console.WriteLine(counter);
 
-namespace CSharpPlayground.Advanced.Thread
-{
-    internal class Thread
-    {
-        public void RunParallelCounter()
-        {
-            int counter = 0;
-            Parallel.For(0, 1_000_000, _ => counter++);
-            Console.WriteLine(counter);
-        }
-    }
-}
 
 /*
       บทที่ 1.1 รากฐาน: Thread, ThreadPool และ Race Condition

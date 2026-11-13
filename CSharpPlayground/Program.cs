@@ -1,5 +1,4 @@
 ﻿using CSharpPlayground;
-using CSharpPlayground.Advanced.Thread;
 
 namespace CSharpPlayground
 {
@@ -7,8 +6,7 @@ namespace CSharpPlayground
     {
         static void Main(string[] args)
         {
-            var thread = new Advanced.Thread.Thread();
-            thread.RunParallelCounter();
+
         }
     }
 }
